@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css?family=Hammersmith+One&display=swap');
+
+.charsheet {
+	width: 830px;
+	background: whiteSmoke;
+}
+
+textarea {
+	resize: none;
+	height: auto;
+	margin:0;
+	font-family: serif;
+}
+
+label,
+span,
+input[type="text"]{	
+	font-family: 'Hammersmith One', sans-serif;
+}
+input[type="number"] {
+	border: none;
+	width: 30%;
+	margin: 3px 3px 3px 3px;
+	padding: 5px;
+	vertical-align: middle;
+	text-align: center;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.repcontainer .btn,
+.repcontrol .btn {
+	border-style: none;
+    border-radius: 0;
+    background-image: none;
+}
+
+.sheet-toggle:not(:checked) ~ .sheet-hide,
+.sheet-toggle:checked ~ .sheet-show {
+	display: none;
+}
+
+.sheet-topbar{
+    background:#da592a;
+    border-style:none;
+    border-width: 0px;
+  	border-color: black; 
+    border-radius:0px;
+}
+
+.sheet-title-image {
+	width: 100%;	
+	text-align: center;
+}
+
+.sheet-topbar-heading {
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 40px;
+}
+
+.sheet-topbar-text{
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 12px;
+}
+
+.sheet-subbar {
+}
+
+.sheet-subbar > input {
+	height: 100%;
+	padding: 0;
+	margin: 1px 1px 1px 1px;
+	border-width: 0px;
+	border-color: transparent;
+	background-color: #fcd8bf;
+	color: #843519;
+	font-size: 38px;
+	line-height: 42px;
+}
+
+.sheet-subbar > .sheet-field-name {
+    width: 60%;
+	float: left;
+	text-align: center;
+}
+
+.sheet-subbar > .sheet-field-class {
+    width: 39%;
+    float: right;
+	text-align: center;
+}
+
+.sheet-box-header {
+    margin: 5px 0px 0px 0px;
+    border-radius:0px;
+    text-align: center;
+    background: #da592a;
+    color: white;
+    font-size: 30px;
+	  border-style: 1px;
+    border-width:1px;
+    border-color:black;
+}
+
+.sheet-box-header-left {
+    margin: 5px 0px 0px 0px;
+    border-radius:0px;
+    text-align: center;
+    background: #843519;
+    color: white;
+    font-size: 30px;
+	border-style: 1px;
+    border-width:1px;
+    border-color:black;
+}
+
+
+.sheet-description-text textarea{
+    height: 145px;
+    width:97%;
+}
+
+.sheet-stat-box{
+	float: left;
+	width: 40%;
+	margin: 1px 1px 1px 1px;
+}
+
+.sheet-description-box{
+	float: left;
+	width: 59%;
+	margin: 1px 1px 1px 1px;
+	border-color: transparent;
+}
+
+.sheet-col-left {
+	float: left;
+	width: 69%;
+	margin: 1px 1px 1px 1px;
+	font-family: 'Hammersmith One', sans-serif;
+}
+
+.sheet-col-right {
+	float: right;
+	width: 30%;
+	margin: 1px 1px 1px 1px;
+	font-family: 'Hammersmith One', sans-serif;
+}
+
+.sheet-col-2{
+	float: left;
+	width: 49%;
+	margin: 1px 1px 1px 1px;
+}
+
+.sheet-col-3{
+	float: left;
+	width: 33%;
+	margin: 1px 1px 1px 1px;
+}
+
+.sheet-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.sheet-move-box{
+    margin: 1px 0px 0px 0px;
+    border-style:solid;
+    border-width:1px;
+    border-color:black;
+    border-radius:0px;
+    background:lightGray;
+}
+
+.sheet-move-box:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+
+.sheet-move-box > textarea{
+    height:200px;
+    width:96%;
+}
+
+.sheet-move-box > input{
+    height: auto;
+    width:98%;
+	  padding: 0;
+	  margin: 1px 2px 1px 2px;
+	  border-width: 1px;
+	  border-color: black;
+	  background-color: darkGray;
+	  color: black;
+	  font-size: 14px;
+	  line-height: 42px;
+	  text-align:center;
+}
+
+.sheet-attribute-box{
+    margin:1px 0px 0px 0px;
+    border-style:solid;
+	  padding: 3px;
+    border-width:1px;
+    border-color: whiteSmoke;
+    border-radius:0px;
+    background:#fcd8bf;
+}
+
+.sheet-attribute-box > textarea {
+    width:96%;
+}
+
+.sheet-attribute-box:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+
+.sheet-attribute-name{
+    float:left;
+    font-size: 20px;
+    font-style:bold;
+    padding: 0px 0px 0px 5px;
+    margin-right:5px;
+	color: #843519;
+}
+
+.sheet-attribute-field{
+    float:right;
+}
+
+.sheet-attribute-element-right{
+    vertical-align: middle;
+    float:right;
+    margin: 4px 5px 1px 5px;
+	color: #843519;
+}
+
+.sheet-attribute-element-left{
+    vertical-align: middle;
+    float:left;
+    margin: 4px 5px 1px 5px;
+}
+
+.sheet-stat-item {
+    margin:1px 0px 0px 0px;
+    border-style:solid;
+    border-width:1px;
+    border-color:whiteSmoke;
+    border-radius:0px;
+    background: #fcd8bf;
+}
+
+.sheet-stat-item:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+
+.sheet-stat-name {
+	float: left;
+	font-size: 20px;
+	margin: 5px;
+    font-style:bold;
+	color: black;
+}
+
+.sheet-stat-field {
+    float:right;
+}
+
+.sheet-stat-element{
+    vertical-align: middle;
+    float:right;
+    margin: 1px 1px 1px 1px;
+}
+
+.sheet-clearfix {
+	clear: both;
+}
+
+.sheet-right {
+	float: right !important;
+}
+
+.sheet-left {
+	float: left !important;
+}
