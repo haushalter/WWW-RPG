@@ -1,0 +1,278 @@
+<!doctype html>
+<html>
+<link href="WWW-RPG.css" rel="stylesheet" type="text/css">
+
+<div class="sheet-topbar">
+
+    <div class="sheet-topbar-heading">Worldwide Wrestling</div>
+
+    <div class="sheet-topbar-text">Second Edition</div>
+
+</div>
+
+
+
+<div class="sheet-subbar">
+
+    <input class="sheet-field-name" type="text" placeholder="Now Making Their Way To The Ring" name="attr_character_name">
+
+	<input class="sheet-field-class" type="text" placeholder="Hailing From" name="attr_hailingfrom">
+
+</div>
+
+
+
+<div class="sheet-row">
+
+    <div class="sheet-col-left">
+
+        <div class="sheet-row">
+
+            <div class="sheet-stat-box">
+
+                <div class="sheet-box-header">Stats</div>
+	<div class="sheet-stat-item">
+                    <div class="sheet-stat-name">Babyface
+                        <input type="checkbox" name="attr_babyfaceorheel" value="babyface">
+						</div>
+			<div class="sheet-stat-name">Heel
+                        <input type="checkbox" name="attr_babyfaceorheel" value="heel">
+			</div>
+	</div>
+				<div class="sheet-stat-item">
+
+                    <div class="sheet-stat-name">Momentum</div>
+
+                    <input class="sheet-stat-field" type="number" value="0" name="attr_momentum">
+
+          </div>
+                <div class="sheet-stat-item">
+
+                    <div class="sheet-stat-name">Body</div>
+
+                    <input class="sheet-stat-field" type="number" value="0" name="attr_body">
+
+                    <div class="sheet-stat-element">
+
+                        <button type="roll" value="/roll 2d6 + @{body}"></button>
+
+                    </div>
+
+                
+
+          </div>
+
+                <div class="sheet-stat-item">
+
+                    <div class="sheet-stat-name">Look</div>
+
+                    <input class="sheet-stat-field" type="number" value="0" name="attr_look">
+
+                    <div class="sheet-stat-element">
+
+                        <button type="roll" value="/roll 2d6 + @{look}"></button>
+
+                    </div>
+
+      </div>
+
+                <div class="sheet-stat-item">
+
+                    <div class="sheet-stat-name">Real</div>
+
+                  <input class="sheet-stat-field" type="number" value="0" name="attr_real">
+
+                    <div class="sheet-stat-element">
+
+                        <button type="roll" value="/roll 2d6 + @{real}"></button>
+
+                    </div>
+
+  </div>
+
+                <div class="sheet-stat-item">
+
+                    <div class="sheet-stat-name">Work</div>
+
+                    <input class="sheet-stat-field" type="number" value="0" name="attr_work">
+
+                    <div class="sheet-stat-element">
+
+                        <button type="roll" value="/roll 2d6 + @{sly}"></button>
+
+					</div>
+
+</div>
+
+            </div>
+
+            <div class="sheet-description-box">
+
+                <div class="sheet-box-header">Entrance</div>
+
+        	    <div class="sheet-description-text">
+
+        		    <textarea name="attr_entrance"></textarea>
+
+        	    </div>
+
+            </div>
+
+        
+
+        </div>
+
+        <div class="sheet-row">
+
+            <div class="sheet-col-2">
+
+                <div class="sheet-box-header">Heat</div>
+					<fieldset class="repeating_heat">
+					<div class="sheet-attribute-box">
+						<div>
+						<input type="text" class="sheet-attribute-element-left" placeholder="Name" name="attr_heat1name">
+       	                <input type="number" class="sheet-attribute-element-left" name="attr_heat1" value="0">
+						</div> 
+						<div class="sheet-attribute-element-left">
+                        <button type="roll" value="/roll 2d6 + @{heat1}"></button>
+						</div>
+						<textarea class="sheet-attribute-element-left" name="attr_heat1desc" placeholder="Description"></textarea>
+        	        </div>
+					</fieldset>
+        	    </div>
+
+        	    
+
+        	   
+
+            <div class="sheet-col-2">
+
+                <div class="sheet-box-header">Injury</div>
+
+        	    <div class="sheet-attribute-box">
+
+        	        <input class="sheet-attribute-field" type="checkbox" value="1" name="attr_injury4">
+        	        <input class="sheet-attribute-field" type="checkbox" value="1" name="attr_injury3">
+        	        <input class="sheet-attribute-field" type="checkbox" value="1" name="attr_injury2">
+        	        <input class="sheet-attribute-field" type="checkbox" value="1" name="attr_injury1">
+					<textarea class="sheet-description-box" placeholder="Description" name="attr_injurydescription"></textarea>
+        	    </div>
+				
+
+            </div>
+
+        </div>
+
+        <div class="sheet-row">
+
+      
+
+                
+
+
+            
+
+        </div>
+
+        
+
+    </div>
+
+    
+
+    <div class="sheet-col-right">
+		
+		<div class="sheet-row">
+			
+		<div class="sheet-box-header">Wants</div>
+
+                <div class="sheet-attribute-box">
+
+        	        <textarea class="sheet-description-box" name="attr_wants" placeholder="Wants"></textarea>
+
+        	    </div>
+		</div>
+		
+        <div class="sheet-row">
+
+            <div class="sheet-box-header">Audience</div>
+
+            <div class="sheet-attribute-box">
+
+        	    <div class="sheet-attribute-element">
+        	        
+					<div class="sheet-attribute-element-right"><span>Top</span>
+
+        	            <input type="checkbox" name="attr_audience" value="5">
+
+        	        </div>
+
+        	        <div class="sheet-attribute-element-right"><span>+4</span>
+
+        	            <input type="checkbox" name="attr_audience" value="4">
+
+        	        </div>
+
+        	        <div class="sheet-attribute-element-right"><span>+3</span>
+
+        	            <input type="checkbox" name="attr_audience" value="3">
+
+        	        </div>
+
+        	        <div class="sheet-attribute-element-right"><span>+2</span>
+
+        	            <input type="checkbox" name="attr_audience" value="2">
+
+        	        </div>
+
+        	        <div class="sheet-attribute-element-right"><span>+1</span>
+
+        	            <input type="checkbox" name="attr_audience" value="1">
+
+        	        </div>
+
+        	        <div class="sheet-attribute-element-right"><span>0</span>
+
+        	        	<input type="checkbox" name="attr_audience" value="0">
+
+					</div>
+						
+        	    </div>
+
+            </div>
+
+            <div class="sheet-attribute-box">
+
+                <div class="sheet-attribute-name">Banked Advances</div>
+
+                <input type="number">
+
+
+            </div>
+
+        </div>
+			
+        <div class="sheet-row">
+
+            <div class="sheet-box-header">Moves</div>
+
+            <fieldset class="repeating_moves">
+
+                <div class="sheet-move-box">
+
+                    <input type="text" name="attr_movename1" placeholder="Move name">
+
+                    <input type="checkbox" class="sheet-toggle" title="show/hide" name="attr_move-show" value="1" />
+
+    		        <textarea name="attr_movebody1" class="sheet-hide" placeholder="Move Description"></textarea>
+
+                </div>
+
+            </fieldset>
+
+        </div>
+
+    </div>
+
+</div>
+</html>
