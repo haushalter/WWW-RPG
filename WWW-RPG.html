@@ -1,51 +1,23 @@
 <!doctype html>
 <html>
-<link href="WWW-RPG.css" rel="stylesheet" type="text/css">
-
 <div class="sheet-topbar">
-
-    <div class="sheet-topbar-heading">Worldwide Wrestling</div>
-
-    <div class="sheet-topbar-text">Second Edition</div>
-
+	<img class="sheet-title-image" src="https://raw.githubusercontent.com/haushalter/WWW-RPG/main/WWW-RPG-Title.png" alt="World Wide Wrestling Title Image">
 </div>
-
-
 
 <div class="sheet-subbar">
 
-    <input class="sheet-field-name" type="text" placeholder="Now Making Their Way To The Ring" name="attr_character_name">
+    <input class="sheet-field-name" type="text" placeholder="Name" name="attr_character_name">
 
-	<input class="sheet-field-class" type="text" placeholder="Hailing From" name="attr_hailingfrom">
+	<input class="sheet-field-class" type="text" placeholder="Gimmick" name="attr_gimmick">
 
 </div>
 
-
-
 <div class="sheet-row">
-
     <div class="sheet-col-left">
-
         <div class="sheet-row">
-
             <div class="sheet-stat-box">
-
-                <div class="sheet-box-header">Stats</div>
-	<div class="sheet-stat-item">
-                    <div class="sheet-stat-name">Babyface
-                        <input type="checkbox" name="attr_babyfaceorheel" value="babyface">
-						</div>
-			<div class="sheet-stat-name">Heel
-                        <input type="checkbox" name="attr_babyfaceorheel" value="heel">
-			</div>
-	</div>
-				<div class="sheet-stat-item">
-
-                    <div class="sheet-stat-name">Momentum</div>
-
-                    <input class="sheet-stat-field" type="number" value="0" name="attr_momentum">
-
-          </div>
+                <div class="sheet-box-header-left">STATS</div>
+				
                 <div class="sheet-stat-item">
 
                     <div class="sheet-stat-name">Body</div>
@@ -54,7 +26,7 @@
 
                     <div class="sheet-stat-element">
 
-                        <button type="roll" value="/roll 2d6 + @{body}"></button>
+                        <button type="roll" value="/me rolls Body [[2d6 + @{body}]]"></button>
 
                     </div>
 
@@ -70,7 +42,7 @@
 
                     <div class="sheet-stat-element">
 
-                        <button type="roll" value="/roll 2d6 + @{look}"></button>
+                        <button type="roll" value="/me rolls Look [[2d6 + @{look}]]"></button>
 
                     </div>
 
@@ -84,7 +56,7 @@
 
                     <div class="sheet-stat-element">
 
-                        <button type="roll" value="/roll 2d6 + @{real}"></button>
+                        <button type="roll" value="/me rolls Real [[2d6 + @{real}]]"></button>
 
                     </div>
 
@@ -98,27 +70,39 @@
 
                     <div class="sheet-stat-element">
 
-                        <button type="roll" value="/roll 2d6 + @{sly}"></button>
+                        <button type="roll" value="/me rolls Work [[2d6 + @{work}]]"></button>
 
 					</div>
 
+				
 </div>
+			<div class="sheet-box-header-left">MOMENTUM
+			<input type="number" name="attr_momentum" value="0">
+			</div> 
+
 
             </div>
 
             <div class="sheet-description-box">
-
-                <div class="sheet-box-header">Entrance</div>
-
-        	    <div class="sheet-description-text">
-
-        		    <textarea name="attr_entrance"></textarea>
-
+                <div class="sheet-box-header">HAILING FROM</div>
+        	    <div class="sheet-attribute-box">
+        	        <textarea class="sheet-description-box" name="attr_hailfrom" placeholder="Hailing From"></textarea>
         	    </div>
-
             </div>
 
+			<div class="sheet-description-box">
+                <div class="sheet-box-header">ENTRANCE</div>
+        	    <div class="sheet-attribute-box">
+        	        <textarea class="sheet-description-box" name="attr_entrance" placeholder="Entrance"></textarea>
+        	    </div>
+            </div>
         
+			<div class="sheet-description-box">
+                <div class="sheet-box-header">WANTS</div>
+        	    <div class="sheet-attribute-box">
+        	        <textarea class="sheet-description-box" name="attr_wants" placeholder="Wants"></textarea>
+        	    </div>
+            </div>
 
         </div>
 
@@ -126,7 +110,7 @@
 
             <div class="sheet-col-2">
 
-                <div class="sheet-box-header">Heat</div>
+                <div class="sheet-box-header">HEAT</div>
 					<fieldset class="repeating_heat">
 					<div class="sheet-attribute-box">
 						<div>
@@ -134,7 +118,7 @@
        	                <input type="number" class="sheet-attribute-element-left" name="attr_heat1" value="0">
 						</div> 
 						<div class="sheet-attribute-element-left">
-                        <button type="roll" value="/roll 2d6 + @{heat1}"></button>
+                        <button type="roll" value="/me rolls Heat with @{heat1name} [[2d6 + @{heat1}]]"></button>
 						</div>
 						<textarea class="sheet-attribute-element-left" name="attr_heat1desc" placeholder="Description"></textarea>
         	        </div>
@@ -147,7 +131,7 @@
 
             <div class="sheet-col-2">
 
-                <div class="sheet-box-header">Injury</div>
+                <div class="sheet-box-header">INJURY</div>
 
         	    <div class="sheet-attribute-box">
 
@@ -182,63 +166,38 @@
 
     <div class="sheet-col-right">
 		
-		<div class="sheet-row">
-			
-		<div class="sheet-box-header">Wants</div>
-
-                <div class="sheet-attribute-box">
-
-        	        <textarea class="sheet-description-box" name="attr_wants" placeholder="Wants"></textarea>
-
-        	    </div>
-		</div>
-		
         <div class="sheet-row">
-
-            <div class="sheet-box-header">Audience</div>
-
+			<div class="sheet-box-header">ROLE</div> 
+<div class="sheet-stat-item">              
+	<div class="sheet-attribute-name">Babyface
+                        <input type="checkbox" name="attr_babyfaceorheel" value="babyface">
+						</div>
+			<div class="sheet-attribute-name">Heel
+                        <input type="checkbox" name="attr_babyfaceorheel" value="heel">
+			</div>
+	</div>
+            <div class="sheet-box-header">AUDIENCE</div>
             <div class="sheet-attribute-box">
-
         	    <div class="sheet-attribute-element">
-        	        
 					<div class="sheet-attribute-element-right"><span>Top</span>
-
         	            <input type="checkbox" name="attr_audience" value="5">
-
         	        </div>
-
         	        <div class="sheet-attribute-element-right"><span>+4</span>
-
         	            <input type="checkbox" name="attr_audience" value="4">
-
         	        </div>
-
         	        <div class="sheet-attribute-element-right"><span>+3</span>
-
         	            <input type="checkbox" name="attr_audience" value="3">
-
         	        </div>
-
         	        <div class="sheet-attribute-element-right"><span>+2</span>
-
         	            <input type="checkbox" name="attr_audience" value="2">
-
         	        </div>
-
         	        <div class="sheet-attribute-element-right"><span>+1</span>
-
         	            <input type="checkbox" name="attr_audience" value="1">
-
         	        </div>
-
         	        <div class="sheet-attribute-element-right"><span>0</span>
-
         	        	<input type="checkbox" name="attr_audience" value="0">
-
 					</div>
-						
         	    </div>
-
             </div>
 
             <div class="sheet-attribute-box">
@@ -254,7 +213,7 @@
 			
         <div class="sheet-row">
 
-            <div class="sheet-box-header">Moves</div>
+            <div class="sheet-box-header">MOVES</div>
 
             <fieldset class="repeating_moves">
 
